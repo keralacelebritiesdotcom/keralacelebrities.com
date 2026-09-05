@@ -37,7 +37,7 @@ html{scroll-behavior:smooth}
 body{margin:0;color:var(--ink);background:#fff;font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.65}
 a{color:inherit;text-decoration:none}
 .container{width:min(1180px,calc(100% - 40px));margin:auto}
-.site-header{position:relative;z-index:100;background:#080808;color:#fff;border-bottom:1px solid #292929}
+.site-header{position:relative;z-index:1000;background:#080808;color:#fff;border-bottom:1px solid #292929}
 .header-inner{min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .logo img{width:150px;height:auto;display:block}
 .main-nav{display:flex;align-items:center;gap:18px;font-size:11px;font-weight:700;text-transform:uppercase}
@@ -45,7 +45,7 @@ a{color:inherit;text-decoration:none}
 .main-nav>a:hover,.nav-dropdown:hover>a,.main-nav>a.active{border-bottom-color:var(--red)}
 .nav-dropdown{position:relative}
 .nav-dropdown>a::after{content:"⌄";margin-left:5px}
-.dropdown-menu{display:none;position:absolute;top:100%;left:-15px;min-width:190px;background:#111;border:1px solid #333;box-shadow:0 15px 35px rgba(0,0,0,.3)}
+.dropdown-menu{display:none;position:absolute;z-index:1100;top:100%;left:-15px;min-width:190px;background:#111;border:1px solid #333;box-shadow:0 15px 35px rgba(0,0,0,.3)}
 .dropdown-menu a{display:block;padding:11px 15px;font-size:12px;text-transform:none;color:#fff}
 .dropdown-menu a:hover{background:#222;color:var(--gold)}
 .nav-dropdown:hover .dropdown-menu{display:block}
@@ -203,8 +203,8 @@ footer a:hover{color:#fff}
     <button class="menu-button" onclick="toggleMenu()" aria-label="Open navigation" aria-expanded="false">☰</button>
     <nav class="main-nav" id="mainNav" aria-label="Main navigation">
       <a href="/">Home</a>
-      <div class="nav-dropdown"><a href="/#celebrities">Celebrities</a><div class="dropdown-menu">
-        <a href="/celebrities/actors.html">Actors</a><a href="/celebrities/actresses.html">Actresses</a><a href="/celebrities/directors.html">Directors</a><a href="/celebrities/singers.html">Singers</a><a href="/celebrities/television.html">Television</a>
+      <div class="nav-dropdown"><a class="active" href="/#celebrities">Celebrities</a><div class="dropdown-menu">
+        <a href="/celebrities/actors.html">Actors &amp; Artists</a><a href="/celebrities/directors.html">Directors</a><a href="/celebrities/singers.html">Singers</a><a href="/celebrities/television.html">Television</a><a href="/celebrities/other-personalities.html">Other Personalities</a>
       </div></div>
       <div class="nav-dropdown"><a href="/movies/">Movies</a><div class="dropdown-menu">
         <a href="/movies/malayalam.html">Malayalam Movies</a><a href="/movies/upcoming.html">Upcoming Movies</a><a href="/movies/box-office.html">Box Office</a>
@@ -223,10 +223,7 @@ footer a:hover{color:#fff}
 <main>
   <div class="container breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;›&nbsp; <a href="/#celebrities">Celebrities</a> &nbsp;›&nbsp; Prithviraj Sukumaran</div>
   <section class="profile-hero"><div class="container profile-layout">
-    <div><div class="profile-photo">
-          <img src="/celebrities/images/prithviraj-sukumaran.jpg" alt="Prithviraj Sukumaran – Malayalam actor, director and producer" width="4780" height="5348" loading="eager" decoding="async">
-          <div class="photo-credit">Prithviraj Sukumaran profile image — image file supplied for KeralaCelebrities.com.</div>
-        </div></div>
+    <div><div class="profile-photo"><img src="/celebrities/images/prithviraj-sukumaran.jpg" alt="Prithviraj Sukumaran – Malayalam actor, director, producer and playback singer" width="1200" height="1600" loading="eager" decoding="async"></div><div class="photo-credit">Prithviraj Sukumaran profile image — image file supplied for KeralaCelebrities.com.</div></div>
     <div><div class="eyebrow">KeralaCelebrities.com · Malayalam Cinema</div><h1>Prithviraj Sukumaran</h1>
       <p class="hero-intro"><strong>Prithviraj Sukumaran</strong> is an actor, director, producer and playback singer whose career has grown from a young leading man into one of Malayalam cinema's prominent multi-hyphenate film personalities. His work spans mainstream entertainers, performance-driven dramas and ambitious filmmaking across Indian-language cinema.</p>
       <div class="badges"><span class="badge">Actor</span><span class="badge">Director</span><span class="badge">Producer</span><span class="badge">Three-Time State Award Winner</span></div>
@@ -277,6 +274,7 @@ footer a:hover{color:#fff}
   <section class="section"><div class="container"><div class="section-label">Explore Kerala cinema</div><h2>More from KeralaCelebrities.com</h2><p>Continue exploring our growing collection of Kerala celebrity profiles, Malayalam cinema pages and entertainment features.</p><div class="internal-links"><a href="/celebrities/mohanlal.html">Mohanlal</a><a href="/celebrities/mammootty.html">Mammootty</a><a href="/celebrities/fahadh-faasil.html">Fahadh Faasil</a><a href="/celebrities/dulquer-salmaan.html">Dulquer Salmaan</a><a href="/celebrities/actors.html">Malayalam Actors</a><a href="/movies/">Malayalam Movies</a><a href="/news/celebrity.html">Celebrity News</a><a href="/#videos">Videos</a></div></div></section>
 </main>
 <footer><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="/KeralaCelebrities.com-logo.jpeg" alt="KeralaCelebrities.com"><p>Celebrating Kerala's personalities, cinema and culture.</p></div><div><h3>Quick Links</h3><div class="footer-links"><a href="/">Home</a><a href="/#celebrities">Celebrities</a><a href="/movies/">Movies</a><a href="/news/">News</a><a href="/#features">Features</a><a href="/#videos">Videos</a></div></div><div><h3>Popular Celebrities</h3><div class="footer-links"><a href="/celebrities/mohanlal.html">Mohanlal</a><a href="/celebrities/mammootty.html">Mammootty</a><a href="/celebrities/prithviraj-sukumaran.html">Prithviraj Sukumaran</a><a href="/celebrities/fahadh-faasil.html">Fahadh Faasil</a><a href="/celebrities/dulquer-salmaan.html">Dulquer Salmaan</a></div></div><div><h3>Contact</h3><p><a href="mailto:keralacelebritiesdotcom@gmail.com">keralacelebritiesdotcom@gmail.com</a></p></div></div><div class="footer-bottom"><div>© 2008–2026 KeralaCelebrities.com. All Rights Reserved.</div><div class="legal-links"><a href="/privacy.html">Privacy Policy</a><a href="/disclaimer.html">Disclaimer</a><a href="/terms.html">Terms &amp; Conditions</a></div></div></div></footer>
-<script>function toggleMenu(){const nav=document.getElementById("mainNav");const button=document.querySelector(".menu-button");const open=nav.classList.toggle("open");button.setAttribute("aria-expanded",open?"true":"false");}</script>
+<script>function toggleMenu(){const nav=document.getElementById("mainNav");const button=document.querySelector(".menu-button");const open=nav.classList.toggle("open");button.setAttribute("aria-expanded",open?"true":"false");}
+document.querySelectorAll(".nav-dropdown > a").forEach(function(link){link.addEventListener("click",function(e){if(window.innerWidth<=900){e.preventDefault();this.parentElement.classList.toggle("open");}});});</script>
 </body>
 </html>
