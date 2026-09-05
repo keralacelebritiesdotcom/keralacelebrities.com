@@ -18,14 +18,14 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6;background:#fff}
 a{text-decoration:none;color:inherit}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
-.site-header{position:relative;background:var(--black);color:#fff;border-bottom:1px solid #292929}
+.site-header{position:relative;z-index:1000;background:var(--black);color:#fff;border-bottom:1px solid #292929}
 .header-inner{min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .logo img{width:150px;height:auto;display:block}
-.main-nav{display:flex;align-items:center;gap:18px;font-size:11px;font-weight:700;text-transform:uppercase}
+.main-nav{display:flex;align-items:center;gap:4px;font-size:11px;font-weight:700;text-transform:uppercase}
 .main-nav>a,.nav-dropdown>a{padding:19px 0 17px;color:#fff;border-bottom:2px solid transparent;white-space:nowrap}
 .main-nav>a:hover,.nav-dropdown:hover>a,.main-nav>a.active{border-bottom-color:var(--red)}
 .nav-dropdown{position:relative}.nav-dropdown>a:after{content:"⌄";margin-left:5px}
-.dropdown-menu{display:none;position:absolute;top:100%;left:-15px;min-width:190px;background:#111;border:1px solid #333;box-shadow:0 15px 35px #0005}
+.dropdown-menu{display:none;position:absolute;top:100%;left:-15px;min-width:205px;background:#111;border:1px solid #333;box-shadow:0 15px 35px #0005;z-index:9999}
 .dropdown-menu a{display:block;padding:11px 15px;color:#fff;font-size:12px;text-transform:none}
 .dropdown-menu a:hover{background:#222;color:var(--gold)}
 .nav-dropdown:hover .dropdown-menu{display:block}
