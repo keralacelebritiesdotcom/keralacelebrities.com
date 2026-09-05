@@ -128,7 +128,7 @@ footer a:hover{color:#fff}
 .nav-dropdown:hover .dropdown-menu{display:none}
 .nav-dropdown.open .dropdown-menu{display:block}
 .profile-layout,.two-col{grid-template-columns:1fr}
-.profile-photo{min-height:260px}.profile-photo img{height:420px}
+.profile-photo{min-height:260px}.profile-photo img{height:420px}.profile-photo img{height:420px}
 .film-grid{grid-template-columns:1fr 1fr}
 .footer-grid{grid-template-columns:1fr 1fr}
 }
@@ -149,8 +149,10 @@ footer a:hover{color:#fff}
 .legal-links{flex-wrap:wrap;gap:12px 20px}
 }
 
-.profile-photo img{width:100%;height:auto;max-height:560px;object-fit:cover;object-position:center top;border-radius:9px;display:block}
-.photo-credit{font-size:10px;color:#777;margin-top:8px;line-height:1.45}
+.profile-photo{background:#111;min-height:390px;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:0;color:#aaa;text-align:center;border:1px solid #333;overflow:hidden;position:relative}
+.profile-photo img{width:100%;height:390px;object-fit:cover;object-position:center top;display:block}
+.photo-credit{position:absolute;left:0;right:0;bottom:0;background:rgba(0,0,0,.78);color:#fff;font-size:9px;line-height:1.35;padding:7px 9px;text-align:left}
+.photo-credit a{color:#fff;text-decoration:underline}
 </style>
 
 <script type="application/ld+json">
@@ -264,8 +266,8 @@ footer a:hover{color:#fff}
       <div>
         <div class="profile-photo">
           <img src="/celebrities/images/mammootty.jpg" alt="Mammootty – Malayalam actor and film producer" width="1200" height="1600" loading="eager" decoding="async">
+          <div class="photo-credit">Mammootty profile image — image file supplied for KeralaCelebrities.com.</div>
         </div>
-        <div class="photo-credit">Mammootty profile image — image file supplied for KeralaCelebrities.com.</div>
       </div>
 
       <div>
